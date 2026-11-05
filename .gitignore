@@ -1,0 +1,37 @@
+# Python virtual environments & caches
+venv/
+backend/venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node & Frontend build outputs
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# Environment variables & secrets (NEVER commit secrets)
+.env
+backend/.env
+*.env
+*.env.local
+
+# Databases & local stores
+*.db
+*.sqlite
+*.sqlite3
+ai_radar.db
+backend/ai_radar.db
+
+# Logs & temp
+*.log
+.system_generated/
+tmp/
+temp/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+desktop.ini
