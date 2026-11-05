@@ -148,9 +148,9 @@ export const Layout: React.FC<Props> = ({
             AI Intelligence Radar &bull; Factual verification, zero synthetic hallucinations.
           </div>
           <div className="flex items-center gap-4">
-            <span>Daily Report scheduled at 07:00 AM IST</span>
+            <span>Daily Report synthesized at 07:00 AM IST</span>
             <span>&bull;</span>
-            <span>Hostinger SMTP Engine</span>
+            <span>In-App Intelligence Dashboard</span>
           </div>
         </div>
       </footer>

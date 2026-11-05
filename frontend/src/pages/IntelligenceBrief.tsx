@@ -107,11 +107,11 @@ export const IntelligenceBrief: React.FC = () => {
             <span className="px-2 py-0.5 text-xs font-semibold bg-blue-50 text-primary-accent rounded border border-blue-200 uppercase tracking-wider">
               Daily Intelligence Synthesis
             </span>
-            <span className="text-xs text-secondary-text">07:00 AM IST Scheduled Delivery</span>
+            <span className="text-xs text-secondary-text">Updated Daily at 07:00 AM IST</span>
           </div>
           <h1 className="text-lg font-bold text-primary-text">AI Intelligence Brief</h1>
           <p className="text-xs text-secondary-text">
-            Fact-grounded daily intelligence executive synthesis curated from verified incoming feeds.
+            Read today's synthesized briefing directly on the dashboard, ground-verified against primary sources.
           </p>
         </div>
 
@@ -133,20 +133,21 @@ export const IntelligenceBrief: React.FC = () => {
           <button
             onClick={handleGenerateReport}
             disabled={isGenerating}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium text-primary-accent bg-blue-50 border border-blue-200 hover:bg-blue-100 transition shadow-sm"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded text-xs font-medium text-white bg-primary-accent hover:bg-primary-accent-hover transition shadow-sm"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${isGenerating ? 'animate-spin' : ''}`} />
-            <span>{isGenerating ? 'Generating...' : 'Synthesize Now'}</span>
+            <span>{isGenerating ? 'Synthesizing...' : 'Synthesize Today\'s Brief'}</span>
           </button>
 
           {report && (
             <button
               onClick={handleSendEmail}
               disabled={isSendingEmail}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium text-white bg-primary-accent hover:bg-primary-accent-hover transition shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 border border-slate-300 transition"
+              title="Optional: Dispatch a copy via SMTP if configured"
             >
               <Send className={`w-3.5 h-3.5 ${isSendingEmail ? 'animate-pulse' : ''}`} />
-              <span>{isSendingEmail ? 'Sending...' : 'Dispatch Email'}</span>
+              <span>{isSendingEmail ? 'Sending...' : 'Email Copy (Optional)'}</span>
             </button>
           )}
         </div>

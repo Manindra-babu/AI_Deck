@@ -255,10 +255,10 @@ export const Settings: React.FC = () => {
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-primary-accent" />
               <h2 className="text-sm font-bold text-primary-text uppercase tracking-wide">
-                Hostinger SMTP Email Delivery
+                Email Notifications (Optional)
               </h2>
             </div>
-            <span className="text-xs text-secondary-text">Used for 07:00 AM IST Daily Brief dispatch</span>
+            <span className="text-xs text-secondary-text">Optional &mdash; All briefings are readable directly on the website</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">

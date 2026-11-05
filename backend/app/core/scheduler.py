@@ -58,12 +58,12 @@ async def scheduled_daily_report_job():
             logger.info(f"Daily report for {today_str} was already sent to {existing_sent_email.recipient}. Skipping duplicate.")
             return
 
-        # Step 3: Dispatch email via Hostinger SMTP
-        if settings.EMAIL_RECIPIENT:
+        # Step 3: Optional email dispatch if configured by user
+        if settings.EMAIL_RECIPIENT and settings.SMTP_USERNAME and settings.SMTP_PASSWORD:
             success, msg = send_daily_report_email(report, settings.EMAIL_RECIPIENT, db)
             logger.info(f"Daily email dispatch result for {today_str}: {msg}")
         else:
-            logger.info("No EMAIL_RECIPIENT set; report generated and saved to database without email dispatch.")
+            logger.info("Email delivery skipped; daily intelligence report generated and saved directly for website viewing.")
 
     except Exception as e:
         logger.error(f"Scheduled daily report job failed: {e}")

@@ -136,7 +136,7 @@ export const Dashboard: React.FC<Props> = ({
                 {todayBrief.top_developments_count} verified developments
               </span>
               <span>&bull;</span>
-              <span>Delivered via Hostinger SMTP at 07:00 AM IST</span>
+              <span>Synthesized automatically at 07:00 AM IST</span>
             </div>
           </div>
         ) : (
@@ -282,7 +282,7 @@ export const Dashboard: React.FC<Props> = ({
                 <span className="font-medium text-slate-800">Every 15 min</span>
               </div>
               <div className="flex justify-between items-center py-1 border-b border-slate-100">
-                <span>Next Daily Dispatch</span>
+                <span>Daily Brief Schedule</span>
                 <span className="font-medium text-primary-accent">07:00 AM IST</span>
               </div>
               <div className="flex justify-between items-center py-1 border-b border-slate-100">
